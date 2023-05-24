@@ -14,13 +14,16 @@ namespace Todoist.src.test
         LoginPage loginPage = new LoginPage();
         LeftMenu leftMenu = new LeftMenu();
 
+        string username = "colocar email con cuenta creada";
+        string password = "password de la cuenta creada";
+
         [TestMethod]
         public void TodoistTest()
         {
             
             mainPage.loginButton.Click();
-            loginPage.emailTextBox.SetText("colocar email con cuenta creada");
-            loginPage.passwordTextBox.SetText("password de la cuenta creada");
+            loginPage.emailTextBox.SetText(username);
+            loginPage.passwordTextBox.SetText(password);
             loginPage.loginbutton.Click();
 
             leftMenu.addProjectButton.Click();
